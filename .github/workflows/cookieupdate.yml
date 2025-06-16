@@ -13,12 +13,10 @@ permissions:
 jobs:
   update-cookies:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.PAT_TOKEN }}
+      uses: actions/checkout@v4  # 👈 NO token required
         fetch-depth: 1
 
     - name: Setup Node.js
